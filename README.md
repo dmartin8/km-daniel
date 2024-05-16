@@ -8,14 +8,15 @@ To add data, simply execute the following function in your browser console:
 
 ```javascript
 addCampaigns([
-  {"id":1,"name":"Daniel","startDate":"9/19/2017","endDate":"3/9/2018","budget":88377},
-  {"id":2,"name":"Jaxspan","startDate":"11/21/2017","endDate":"2/21/2018","budget":608715},
-  {"id":3,"name":"Miboo","startDate":"11/1/2017","endDate":"6/20/2017","budget":239507},
-  {"id":4,"name":"Trilith","startDate":"8/25/2017","endDate":"11/30/2017","budget":179838},
-  {"id":5,"name":"Layo","startDate":"11/28/2017","endDate":"3/10/2018","budget":837850},
-  {"id":6,"name":"Photojam","startDate":"7/25/2017","endDate":"6/23/2017","budget":858131},
-  {"id":7,"name":"Blogtag","startDate":"6/27/2017","endDate":"1/15/2018","budget":109078},
-  {"id":8,"name":"Rhyzio","startDate":"10/13/2017","endDate":"1/25/2018","budget":272552},
-  {"id":9,"name":"Zoomcast","startDate":"9/6/2017","endDate":"11/10/2017","budget":301919},
-  {"id":10,"name":"Realbridge","startDate":"3/5/2022","endDate":"10/2/2025","budget":505602}
-]);
+  {"id": 11, "name": "Santiago", "startDate": "05/02/2023", "endDate": "08/16/2024", "budget": 394613},
+  {"id": 12, "name": "Mateo", "startDate": "07/10/2023", "endDate": "09/03/2024", "budget": 700854},
+  {"id": 13, "name": "Matías", "startDate": "03/08/2023", "endDate": "05/17/2024", "budget": 889056},
+  {"id": 14, "name": "Valentina", "startDate": "02/10/2023", "endDate": "06/14/2024", "budget": 382973},
+  {"id": 15, "name": "Sofía", "startDate": "04/17/2022", "endDate": "09/10/2023", "budget": 606733},
+  {"id": 16, "name": "Lucía", "startDate": "02/25/2022", "endDate": "06/12/2023", "budget": 635584},
+  {"id": 17, "name": "León", "startDate": "05/01/2022", "endDate": "06/25/2023", "budget": 964195},
+  {"id": 18, "name": "Emma", "startDate": "01/17/2022", "endDate": "05/05/2023", "budget": 884131},
+  {"id": 19, "name": "Marta", "startDate": "04/28/2021", "endDate": "09/05/2022", "budget": 624552},
+  {"id": 20, "name": "David", "startDate": "01/05/2021", "endDate": "03/28/2022", "budget": 727192}
+]
+);

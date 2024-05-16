@@ -5,11 +5,12 @@ import SearchForm from './SearchForm';
 import DateRangePicker from './DateRange';
 import CampaignTable from './CampaignTable';
 import { Campaign, DateRange } from '../types';
+import campaignExamples from './../constants/campaignExamples';
 
 const CampaignsContainer = () => {
 
-  const [initialCampaigns, setInitialCampaigns] = useState<Campaign[]>([]);
-  const [campaigns, setCampaigns] = useState<Campaign[]>([]);
+  const [initialCampaigns, setInitialCampaigns] = useState<Campaign[]>(campaignExamples);
+  const [campaigns, setCampaigns] = useState<Campaign[]>(campaignExamples);
   const [queryState, setQuerySate] = useState('');
   const [rangeState, setRangeState] = useState<DateRange>(['', '']);
 
