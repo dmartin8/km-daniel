@@ -3,10 +3,12 @@ description: "Setup Node.js and installing dependencies !!!"
 runs:
   using: "composite"
   steps:
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
+    - name: Cache dependencies ⚡
+      id: cache_dependencies
+      uses: actions/cache@v4
       with:
-        node-version: 22
+        path: mk-test-daniel/node_modules
+        key: node-modules-${{ hashFiles('mk-test-daniel/package-lock.json') }}
 
     - name: Cache dependencies
       id: cache_dependencies
