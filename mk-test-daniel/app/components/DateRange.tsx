@@ -44,7 +44,7 @@ const DateRange: React.FC<DateRangeProps> = ({ onSelectRange }) => {
       label =  'Campaigns until ' + endDate.format('MM/DD/YYYY');
     }
     if (startDate && endDate) {
-      label =  'Campaigns between ' + startDate.format('MM/DD/YYYY') + 'and' + endDate.format('MM/DD/YYYY') ;
+      label =  'Campaigns between ' + startDate.format('MM/DD/YYYY') + ' and ' + endDate.format('MM/DD/YYYY') ;
     }
     return label;
   }
