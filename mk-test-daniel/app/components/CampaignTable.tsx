@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
-import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Container } from '@mui/material';
 import { Campaign } from './../types'
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 import Chip from '@mui/material/Chip';
 
 interface CampaignTableProps {
@@ -66,7 +66,7 @@ const CampaignTable: React.FC<CampaignTableProps> = ({ campaigns }) => {
 		}
 	]
   return (
-    <Container maxWidth="md" style={{ height: 700 }} className='mt-5'>
+    <Container maxWidth="md" style={{ height: 700 }} className='mt-4'>
       <DataGrid rows={rows} columns={columns} autoPageSize />
     </Container>
   );

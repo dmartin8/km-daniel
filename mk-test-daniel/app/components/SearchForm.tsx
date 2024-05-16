@@ -1,12 +1,10 @@
-// Hijo
 import React, { useState } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import { Button } from '@mui/material';
-import ClearIcon from '@mui/icons-material/Clear';
+
 interface SearchFormProps {
-  onSearch: (query: string) => void; // La función del padre para manejar la búsqueda
+  onSearch: (query: string) => void;
 }
 
 const Search = styled('div')(({ theme }) => ({
@@ -51,19 +49,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   const [query, setQuery] = useState('')
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newQuery = e.target.value;
     onSearch(e.target.value);
     setQuery(e.target.value);
   };
 
-  const clearQuery = () => {
-    onSearch('');
-    setQuery('')
-  };
-
   return (
     <>
-      <Search className='w-100'>
+      <Search style={{ width:'850px'}}>
         <SearchIconWrapper>
           <SearchIcon />
         </SearchIconWrapper>
@@ -74,9 +66,6 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           onChange={handleChange}
         />
       </Search>
-      <Button onClick={clearQuery} style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}>
-        <ClearIcon />
-      </Button>
     </>
   );
 };
