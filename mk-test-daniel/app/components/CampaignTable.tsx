@@ -66,7 +66,7 @@ const CampaignTable: React.FC<CampaignTableProps> = ({ campaigns }) => {
 		}
 	]
   return (
-    <Container maxWidth="md" style={{ height: 700 }} className='mt-4'>
+    <Container maxWidth="md" style={{ height: 700 }} className='mt-4 mb-5'>
       <DataGrid rows={rows} columns={columns} autoPageSize />
     </Container>
   );

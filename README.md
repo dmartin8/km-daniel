@@ -1,6 +1,6 @@
 # KM test by Daniel Martín
 
-Welcome to this test application developed by Daniel Martín. You can view the application [here](https://github.com/dmartin8).
+Welcome to this test application developed by Daniel Martín. You can view the application [here](https://dmartin8.github.io/km-daniel/).
 
 This web application was created as a response to the following test: [Test Case](https://github.com/dimik/km-test-case?tab=readme-ov-file).
 
