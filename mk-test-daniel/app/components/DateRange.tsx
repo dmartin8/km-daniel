@@ -25,12 +25,6 @@ const DateRange: React.FC<DateRangeProps> = ({ onSelectRange }) => {
     setEndDate(date);
     onSelectRange([startDate ? startDate.format('MM/DD/YYYY') : '', date ? date.format('MM/DD/YYYY') : '']);
   };
-  
-  const handleClearFilters = () => {
-    setStartDate(null);
-    setEndDate(null);
-    onSelectRange(['', '']);
-  };
 
   const handleDelete = () => {
     setStartDate(null);

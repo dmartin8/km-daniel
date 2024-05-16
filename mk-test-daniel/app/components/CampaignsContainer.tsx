@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { AppBar, Button, Toolbar, Typography, Container} from '@mui/material';
+import { AppBar, Container} from '@mui/material';
 import SearchForm from './SearchForm';
 import DateRangePicker from './DateRange';
 import CampaignTable from './CampaignTable';
-import { Campaign, DateRange, CampaignsContainerProps } from '../types';
+import { Campaign, DateRange } from '../types';
 
 const CampaignsContainer = () => {
 
