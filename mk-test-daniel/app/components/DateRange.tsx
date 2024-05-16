@@ -16,7 +16,6 @@ const DateRange: React.FC<DateRangeProps> = ({ onSelectRange }) => {
   const [rangeChip, setRangeChip] = useState<Boolean>(false);
 
   const handleStartDateChange = (date: Dayjs | null) => {
-    console.log(date)
     setStartDate(date);
     onSelectRange([date ? date.format('MM/DD/YYYY') : '', endDate?  endDate.format('MM/DD/YYYY') : '']);
     setRangeChip(true)

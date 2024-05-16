@@ -40,7 +40,6 @@ const CampaignsContainer = () => {
   };
 
   const handleDateRangeSelect = (range: DateRange) => {
-    console.log(range)
     setRangeState(range);
 
     let filteredCampaigns = filterByRange(range);
