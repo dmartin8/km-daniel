@@ -4,13 +4,13 @@ runs:
   using: "composite"
   steps:
     - name: Setup Node.js
-      uses: actions/setup-node@v5
+      uses: actions/setup-node@v4
       with:
         node-version: 22
 
     - name: Cache dependencies
       id: cache_dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: mk-test-daniel/node_modules
         key: node-modules-${{ hashFiles('mk-test-daniel/package-lock.json') }}
