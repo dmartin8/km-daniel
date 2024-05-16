@@ -33,10 +33,11 @@ jobs:
         run: npx next build
         working-directory: mk-test-daniel 
 
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: ./out
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2  # Se cambió de actions/upload-pages-artifact@v3 a actions/upload-artifact@v2
+        with:
+          name: nextjs-app  # Nombre del artefacto
+          path: mk-test-daniel/out  # Ruta del directorio de salida
 
   deploy:
     environment:
@@ -47,6 +48,14 @@ jobs:
     needs: build
 
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: nextjs-app  # Nombre del artefacto
+          path: mk-test-daniel/out  # Ruta de destino para descargar el artefacto
+
       - name: Publish to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          path: mk-test-daniel/out  # Ruta del directorio de salida
