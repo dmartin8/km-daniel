@@ -24,6 +24,7 @@ const DateRange: React.FC<DateRangeProps> = ({ onSelectRange }) => {
   const handleEndDateChange = (date: Dayjs | null) => {
     setEndDate(date);
     onSelectRange([startDate ? startDate.format('MM/DD/YYYY') : '', date ? date.format('MM/DD/YYYY') : '']);
+    setRangeChip(true)
   };
 
   const handleDelete = () => {
@@ -34,18 +35,18 @@ const DateRange: React.FC<DateRangeProps> = ({ onSelectRange }) => {
   };
 
   const generateLabel = () => {
-    let label = 'Remove';
+    let label = 'Dates Filter';
     
     if (startDate && !endDate) {
-      return 'Campaigns since ' + startDate.format('MM/DD/YYYY');
+      label =  'Campaigns since ' + startDate.format('MM/DD/YYYY');
     }
     if (!startDate && endDate) {
-      return 'Campaigns unitil ' + endDate.format('MM/DD/YYYY');
+      label =  'Campaigns until ' + endDate.format('MM/DD/YYYY');
     }
     if (startDate && endDate) {
-      return 'Campaigns between ' + endDate.format('MM/DD/YYYY');
+      label =  'Campaigns between ' + startDate.format('MM/DD/YYYY') + 'and' + endDate.format('MM/DD/YYYY') ;
     }
-    return 'label';
+    return label;
   }
   return (
     <><div className='d-flex mt-4'>
