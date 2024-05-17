@@ -1,0 +1,11 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    overflow-x: hidden; /* Previene el desbordamiento horizontal */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  

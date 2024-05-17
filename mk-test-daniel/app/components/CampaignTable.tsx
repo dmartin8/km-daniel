@@ -10,8 +10,9 @@ interface CampaignTableProps {
 }
 
 const CampaignTable: React.FC<CampaignTableProps> = ({ campaigns }) => {
+  // add random to id in case user add repeated campaigns
   const rows = campaigns.map((campaign) => ({
-    id: campaign.id,
+    id: campaign.id ? campaign.id + Math.random() : Math.random(),
     name: campaign.name,
     startDate: campaign.startDate,
     endDate: campaign.endDate,

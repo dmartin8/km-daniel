@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import { Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 interface SearchFormProps {
   onSearch: (query: string) => void;
@@ -47,6 +50,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
   const [query, setQuery] = useState('')
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onSearch(e.target.value);
@@ -54,8 +59,14 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   };
 
   return (
-    <>
-      <Search style={{ width:'850px'}}>
+    <Box sx={{
+      width: isDesktop ? '890px' : '100%',
+      }}>
+      <Search
+        sx={{
+          // width: isDesktop ? '850px' : '100%',
+          margin: isDesktop ? '' : '0 20px',
+        }}>
         <SearchIconWrapper>
           <SearchIcon />
         </SearchIconWrapper>
@@ -64,9 +75,10 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           placeholder="Search…"
           inputProps={{ 'aria-label': 'search' }}
           onChange={handleChange}
+          className='w-100'
         />
       </Search>
-    </>
+    </Box>
   );
 };
 
